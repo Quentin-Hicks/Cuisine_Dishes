@@ -220,7 +220,7 @@ console.log('Dishes with even servings: ', evenServings)
 function findTomatoAndCheeseIngredients(){
 
     let results = dishes.filter(function(el){
-        if(el.ingredients.includes('tomato', 'cheese')){
+        if(el.ingredients.includes('tomato') && el.ingredients.includes('cheese')){
             return true;
         }
         else{
