@@ -279,11 +279,21 @@ console.log('Cuisine Dish Names: ', dishNames(dishes))
 
 function vegetarianDishCuisineNames(arrayOfDishes){
 
-    let nameOfDishes = arrayOfDishes.map(function(el){
+    let vegetarianCuisine = arrayOfDishes.filter(function(el){
+        if(el.cuisine == "Vegetarian"){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+
+    let vegetarianDish = vegetarianCuisine.map(function(el){
         return el.cuisine + ' ' + el.name;
     })
 
-    return nameOfDishes;
+
+    return vegetarianDish;
 }
 
 console.log('Vegetarian Dish Cuisines: ', vegetarianDishCuisineNames(dishes))
